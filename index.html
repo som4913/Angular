@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="homectrl.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" media="screen" />
+</head>
+
+<body ng-app="myApp" ng-controller="homectrl">
+    <div ng-repeat="products in filters">
+        <div class="topnav">
+            <img src="./images/logo.jpg" style="width: 80px;height: 50px;">
+            <a class="active" href="#home">Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div><br><br>
+        <!-- body section -->
+
+        <div class="container">
+            <h2>{{heading}}</h2>
+            <div id="contentalign">
+                <div>
+                    <img src="./images/img1.png" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].aquapearl.name }}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].aquapearl.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].aquapearl.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].aquapearl.discount}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        &nbsp;&nbsp;
+
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                </div>
+                <hr><br><br><br><br><br><br>
+                <div>
+                    <img src="./images/grand.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].grandplus.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].grandplus.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].grandplus.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].grandplus.discount}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                    <hr> <br><br><br><br><br><br><br>
+                </div>
+                <div>
+                    <img src="./images/solar.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].solar.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].solar.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].solar.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].solar.discount}}</div>&nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        &nbsp;&nbsp;
+
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                </div>
+                <hr><br><br><br><br><br><br>
+                <div>
+                    <img src="./images/imag4.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].Mineralplant.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].Mineralplant.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].Mineralplant.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].grandplus.discount}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                    <hr> <br><br><br><br><br><br><br>
+                </div>
+                <div>
+                    <img src="./images/imag5.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].Mineralplant2.name}}</b></div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].Mineralplant2.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].Mineralplant2.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].Mineralplant2.discount}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        &nbsp;&nbsp;
+
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                </div>
+                <hr><br><br><br><br><br><br>
+                <div>
+                    <img src="./images/imag6.png" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].Dolphin.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].Dolphin.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].Dolphin.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].Dolphin.discount}}</div>&nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                    <hr> <br><br><br><br><br><br><br>
+                </div>
+                <div>
+                    <img src="./images/imag7.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].DMPLANT.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].DMPLANT.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].DMPLANT.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].DMPLANT.discount}}</div>&nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        &nbsp;&nbsp;
+
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                </div>
+                <hr><br><br><br><br><br><br>
+                <div>
+                    <img src="./images/img8.png" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].UPS.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].UPS.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].UPS.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].UPS.discount}}</div>&nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                    <hr> <br><br><br><br><br><br><br>
+                </div>
+                <div>
+                    <img src="./images/imag9.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].Softner.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].Softner.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].Softner.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].Softner.discount}}</div>&nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        &nbsp;&nbsp;
+
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                </div>
+                <hr><br><br><br><br><br><br>
+                <div>
+                    <img src="./images/img10.jpg" style="width: 250px;height: 300px;">
+                    <div class="descrp">
+                        <div class="prodname"><b>{{products.purifiers[0].SolarUPS.name}}</b></div>&nbsp;&nbsp;&nbsp;
+                        <div><b>Description:</b>{{products.purifiers[0].SolarUPS.description}}</div>
+                        <div><b><strike>MRP:</b>{{products.purifiers[0].SolarUPS.price}}</strike></div>
+                        <div><b>Discount Price:</b>RS {{products.purifiers[0].SolarUPS.discount}}</div>
+                        &nbsp;&nbsp;&nbsp;
+                        <div> <button ng-click="count = count+1">+</button>&nbsp;&nbsp;
+                            {{count}}&nbsp;&nbsp;
+                            <button ng-click="count = count-1">-</button>
+                        </div>
+                        <div><input type="button" name="Add to Cart" value="Add to Cart" id="cartbutoon"
+                                ng-click=updatecounter(count)></div>
+                    </div>
+                    <hr> <br><br><br><br><br><br><br>
+                </div>
+            </div>
+
+            <!-- <div>
+                    <img src="./images/img1.png">
+                    <input type="button" name="Add to Cart" value="Add to Cart" class="img">
+                </div>
+                <div>
+                    <img src="./images/img3.jpg">
+                    <input type="button" name="Add to Cart"value="Add to Cart" class="img">
+                </div> -->
+        </div>
+    </div>
+    <div class="check" id="scrolla1">
+        <div>Qty:{{count}}</div>
+        <div>Total:{{Total}}</div>
+        <button type="submit" value="checkout" name="checkout" id="sub" ng-click=submit()>Checkout</button>
+    </div>
+    <div>
+        <video controls ng-src="{{videoUrl}}"></video>
+    </div>
+    <div class="footer">
+        <footer>
+            <p>Posted by:HEALTH SERVICES</p>
+            <p>Contact information: <a href="mailto:thimmegowdat7@gmail.com">
+                    thimmegowdat7@gmail.com</a>.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

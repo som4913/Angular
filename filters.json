@@ -1,0 +1,64 @@
+{
+    "purifiers": [{
+        "aquapearl": {
+            "name": "AQUA PEARL",
+            "price": "12,500",
+            "discount":"9,500",
+            "description":"RO UV TDS"
+        },
+        "grandplus": {
+            "name": "Grandplus",
+            "price": "11,500",
+            "discount":"8,500",
+            "description":"RO UV TDS"
+        },
+        "solar": {
+            "name": "Supreme",
+            "price": "14,500",
+            "discount":"13,500",
+            "description":"100LPD"
+        },
+        "Mineralplant": {
+            "name": "Mineralplant",
+            "price": "5,500",
+            "discount":"3,500",
+            "description":"RO"
+        },
+        "Mineralplant2": {
+            "name": "3stage filter",
+            "price": "9,500",
+            "discount":"5,500",
+            "description":"RO"
+        },
+        "Dolphin": {
+            "name": "Dolphin",
+            "price": "8,500",
+            "discount":"6,500",
+            "description":"RO UV"
+        },
+        "DMPLANT": {
+            "name": "DM PLANT",
+            "price": "9,500",
+            "discount":"7,500",
+            "description":"RO UV"
+        },
+        "UPS": {
+            "name": "LUMINOUS",
+            "price": "6,500",
+            "discount":"5,500",
+            "description":"6hrs "
+        },
+        "Softner": {
+            "name": "Softner",
+            "price": "23,500",
+            "discount":"18,500",
+            "description":"Hardness removal"
+        },
+        "SolarUPS": {
+            "name": "SolarUPS",
+            "price": "32,500",
+            "discount":"28,500",
+            "description":"6hrs "
+        }
+    }]
+}
